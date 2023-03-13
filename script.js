@@ -1,3 +1,5 @@
+//
+
 const checkChoice = {
 	0: "rock",
 	1: "paper",
@@ -49,6 +51,14 @@ while (flag) {
 				default:
 					alert("please enter either 1, 0 or 2");
 			}
+
+			if (playerChoice === 1) {
+				alert("Player wins this round");
+			} else if (playerChoice === 2) {
+				alert("Computer wins this round");
+			} else {
+				alert("This round ended in a draw");
+			}
 		} else if (computerChoice === 1) {
 			switch (playerChoice) {
 				case 1:
@@ -70,6 +80,13 @@ while (flag) {
 					break;
 				default:
 					alert("please enter either 1, 0 or 2");
+			}
+			if (playerChoice === 1) {
+				alert("This round ended in a draw");
+			} else if (playerChoice === 2) {
+				alert("Player wins this round");
+			} else {
+				alert("Computer wins this round");
 			}
 		} else {
 			switch (playerChoice) {
@@ -93,6 +110,13 @@ while (flag) {
 				default:
 					alert("please enter either 1, 0 or 2");
 			}
+			if (playerChoice === 1) {
+				alert("Computer wins this round");
+			} else if (playerChoice === 2) {
+				alert("This round ended in a draw");
+			} else {
+				alert("Player wins this round");
+			}
 		}
 
 		alert(
@@ -105,11 +129,16 @@ while (flag) {
 				"pts"
 		);
 
-		playerScore === computerScore
-			? alert("It's a draw")
-			: playerScore > computerScore
-			? alert("Player wins this round")
-			: alert("Computer wins this round");
+		//   playerScore === computerScore? alert("It's a draw"): playerScore > computerScore? alert("Player wins this round")
+		//     : alert("Computer wins this round");
+
+		// if(playerScore > computerScore){
+		//    alert("Player wins this round");
+		// }else if(computerScore > playerScore){
+		//    alert("Computer wins this round");
+		// }else{
+		//    alert("It's a draw");
+		// }
 	} else {
 		if (playerScore > computerScore) {
 			let highestScore = playerScore;
@@ -135,7 +164,7 @@ while (flag) {
 					playerScore +
 					" pts" +
 					"\n" +
-					"Highest Score:  Computer  Winner"
+					"Highest Score:  Computer  is the winner"
 			);
 		} else {
 			if (mychecker == 1) {
